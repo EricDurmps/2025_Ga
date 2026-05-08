@@ -1,0 +1,8 @@
+Die Tabellen müssen in der Reihenfolge ihrer Abhängigkeiten erstellt werden.
+Zuerst Tabellen ohne Fremdschlüssel:
+raum und mitarbeiter.
+Danach hardware, weil diese auf raum verweist.
+Zum Schluss historie, weil diese auf andere Tabellen verweist.
+
+historie kann nicht zuerst erstellt werden, da die referenzierten Tabellen
+noch nicht existieren würden.
