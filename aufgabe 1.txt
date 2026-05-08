@@ -1,0 +1,1 @@
+aufgrund der foreign keys müssen vorher die anderen Tabellen erstellt sein, da die db sonst nicht weiß auf was sich das bezieht
