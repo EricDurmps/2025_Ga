@@ -6,6 +6,12 @@ create table raum (
 	etage smallint
 );
 
+alter table raum
+add opt_bezeichnung varchar(16);
+
+alter table raum 
+rename column raum to raum_nr;
+
 select * from raum;
 
 create table mitarbeiter (
@@ -43,3 +49,51 @@ create table historie (
 );
 
 select * from historie;
+
+
+
+insert into raum (
+	raum_nr,
+	etage,
+	opt_bezeichnung
+)
+values (
+	6,
+	0,
+	'Lager'
+);
+
+insert into raum (
+	raum_nr,
+	etage
+)
+values (
+	floor(random() * (0-25) + 0)::int,
+	floor(random() * (0-10) + 0)::int
+);
+
+select * from raum;
+
+insert into mitarbeiter (
+	vorname,
+	nachname)
+values (
+	'Günter',
+	'Fünter'
+);
+insert into mitarbeiter (
+	vorname,
+	nachname)
+values (
+	'Tester',
+	'Fester'
+);
+insert into mitarbeiter (
+	vorname,
+	nachname)
+values (
+	'Max',
+	'Mustermann'
+);
+
+select * from mitarbeiter;
